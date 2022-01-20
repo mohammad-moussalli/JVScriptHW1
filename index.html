@@ -23,7 +23,17 @@
             console.log(isALeapYear(leap_year));
             console.log(isALeapYear(not_leap_year));
 
-            
+            function BMIIndex(){
+                var height = prompt("Enter your height in cm: ");
+                var weight = prompt("Enter your weight in kg: ");
+
+                if(height>0 && weight>0){
+                    var BMI = (weight / height / height) * 10000;
+                    return BMI;
+                }
+            }
+
+            console.log("Your BMI Index is " + BMIIndex());
 
 
 
