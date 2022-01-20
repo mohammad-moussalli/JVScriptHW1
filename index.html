@@ -6,6 +6,29 @@
 
     <body>
         <h1>HELLO WORLD!!</h1>
+
+        <script>
+            function isALeapYear(year){
+                if(year==0){
+                    return false;
+                }
+                else if(year%4==0 && year%100!=0 || year%4==0 && year%100==0 && year%400==0){
+                    return true;
+                }
+                return false;
+            }
+
+            var leap_year = 2000;
+            var not_leap_year = 0;
+            console.log(isALeapYear(leap_year));
+            console.log(isALeapYear(not_leap_year));
+
+            
+
+
+
+
+        </script>
     </body>
 
 
