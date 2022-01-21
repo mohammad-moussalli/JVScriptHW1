@@ -39,26 +39,6 @@
 
             console.log("Your BMI Index is " + BMIIndex());
 
-            /* function notRepeating(list){
-                var not_repeated = {};
-                for(var i = 0; i < list.length; i++){
-                    var number = list[i];
-                    if (!not_repeated[number.key]){
-                        not_repeated[number.key] = [1];
-                    }else{
-                        not_repeated[number.key]+=1;
-                    }
-                }
-                for (var j = 0; j < Object.keys(not_repeated).length; j++){
-                    var k = not_repeated[j];
-                    if(k == 1){
-                        return not_repeated[j];
-                    }
-                }
-            } */
-
-            var duplicate_array = [1, 2, 4, 5, 9, 1, 2, 4, 5];
-
             function noneRepeating(array){
                 for(var i = 0; i < array.length; i++){
                     for(var j = i; j < array.length; j++){
@@ -72,6 +52,7 @@
                 }
             }
 
+            var duplicate_array = [1, 2, 4, 5, 9, 1, 2, 4, 5];
             console.log(noneRepeating(duplicate_array));
 
             function Sort(arr){
