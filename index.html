@@ -57,7 +57,7 @@
             var duplicate_array = [1, 2, 4, 5, 9, 1, 2, 4, 5];
             // console.log(notRepeatedNumber(duplicate_array));
 
-            function nonRepeating(array){
+            function noneRepeating(array){
                 for(var i = 0; i < array.length; i++){
                     for(var j = i; j < array.length; j++){
                         if (i != j && array[i] == array[j]){
@@ -70,8 +70,32 @@
                 }
             }
 
-            console.log(nonRepeating(duplicate_array));
+            console.log(noneRepeating(duplicate_array));
+
+            function Sort(arr){
+                for(var i = 0; i < arr.length; i++){
+                    for(var j = 0; j < arr.length - i - 1; j++){
+                        if(arr[j + 1] < arr[j]){
+                            var temp = arr[j+1];
+                            arr[j+1] = arr[j];
+                            arr[j] = temp;
+                        }
+                    }
+                }
+                return arr;
+            }
             
+            function secondMaximum(integers_array){
+                var sorted_array = Sort(integers_array);
+                var len = integers_array.length;
+                if (len > 2){
+                    return sorted_array[len-2];
+                }
+            }
+
+            var array = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+            console.log(secondMaximum(array));
+
 
 
         </script>
